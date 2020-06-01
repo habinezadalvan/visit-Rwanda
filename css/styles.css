@@ -77,6 +77,10 @@ body {
 .col-1-of-2__paragraph {
   font-size: 2rem; }
 
+.heading-tertiary {
+  text-transform: uppercase;
+  font-size: 1.6rem; }
+
 .u-center-text {
   text-align: center; }
 
@@ -85,6 +89,9 @@ body {
 
 .u-margin-top-6 {
   margin-top: 5rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 3rem; }
 
 .btn:link, .btn:visited {
   text-decoration: none;
@@ -177,6 +184,24 @@ body {
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.8); }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: .3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
+  padding: 4rem;
+  transition: transform .3s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: .5rem;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(126, 213, 111, 0.8));
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
+
 .row {
   max-width: 144rem;
   margin: 0 auto; }
@@ -241,3 +266,8 @@ body {
   background-color: #f7f7f7;
   padding: 30rem 0;
   margin-top: -15vh; }
+
+.section-features {
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(0, 0, 0, 0.5)), url("../../assets/lovely-giraphes.png");
+  background-size: cover;
+  padding: 20rem 0; }
