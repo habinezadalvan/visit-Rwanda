@@ -4,7 +4,11 @@
     margin-top: -15vh;
 }
 .section-features{
-    background-image:linear-gradient(to right bottom, rgba($green-color-primary-light, .8),  rgba($black-color-primary, 0.5)), url('../../assets/lovely-giraphes.png');
+    background-image:linear-gradient(to right bottom, rgba($green-color-primary-light, .5),  rgba($black-color-primary, 0.5)), url('../../assets/elephants.jpg');
     background-size: cover;
     padding: 20rem 0;
+}
+.section-popular{
+    background-color: $gray-color-light-2;
+    padding: 10rem 0 20rem 0;
 }

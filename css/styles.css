@@ -72,7 +72,8 @@ body {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(126, 213, 111, 0.8));
   display: inline-block;
   -webkit-background-clip: text;
-  color: transparent; }
+  color: transparent;
+  letter-spacing: 1.4rem; }
 
 .col-1-of-2__paragraph {
   font-size: 2rem; }
@@ -92,6 +93,12 @@ body {
 
 .u-margin-bottom-small {
   margin-bottom: 3rem; }
+
+.u-center-content {
+  text-align: center; }
+
+.u-margin-top-medium {
+  margin-top: 10rem; }
 
 .btn:link, .btn:visited {
   text-decoration: none;
@@ -132,6 +139,13 @@ body {
   .btn--white::after {
     background-color: #fff; }
 
+.btn--blue {
+  background-color: #28B9FB;
+  color: #fff;
+  border-radius: 10rem; }
+  .btn--blue::after {
+    background-color: #28B9FB; }
+
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
@@ -156,6 +170,99 @@ body {
 .btn-text:active {
   transform: translateY(0);
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 53rem; }
+  .card__side {
+    height: 53rem;
+    width: 100%;
+    transition: all 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: .3rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    overflow: hidden; }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back--1 {
+        background-image: linear-gradient(to right bottom, #28B9FB, #1F75FE); }
+      .card__side--back--2 {
+        background-image: linear-gradient(to right bottom, #FFE715, #FCBA04); }
+      .card__side--back--3 {
+        background-image: linear-gradient(to right bottom, #76B800, #76B800); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__image {
+    height: 23rem;
+    background-size: cover;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__image--1 {
+      background-image: linear-gradient(to right bottom, #28B9FB, #1F75FE), url("../assets/grf.png"); }
+    .card__image--2 {
+      background-image: linear-gradient(to right bottom, rgba(255, 231, 21, 0.5), #FCBA04), url("../assets/gorilla2.png"); }
+    .card__image--3 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.5), #28b485), url("../assets/nyungwe.jpg"); }
+  .card__heading {
+    font-size: 2.7rem;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    top: 12.3rem;
+    left: 12rem;
+    text-align: center;
+    width: 45%; }
+  .card__heading-span {
+    padding: 1rem 1.2rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(40, 185, 251, 0.7), rgba(31, 117, 254, 0.7)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(255, 231, 21, 0.5), rgba(252, 186, 4, 0.5)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.5), rgba(40, 180, 133, 0.5)); }
+  .card__content {
+    padding: 3rem;
+    margin-top: 1.5rem; }
+    .card__content ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__content ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        font-weight: 700; }
+        .card__content ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .card__back-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .card__back-paragraphs {
+    color: #fff;
+    margin-bottom: 13rem;
+    text-align: center; }
+  .card__back-be-there {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 4rem; }
+  .card__back-simple {
+    font-size: 3rem;
+    font-weight: 100; }
 
 .composition {
   position: relative; }
@@ -235,6 +342,7 @@ body {
     background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(0, 0, 0, 0.5)), url("../assets/nyungwe.jpg");
     background-size: cover;
     background-position: top;
+    -webkit-clip-path: polygon(0 20vh, 100% 0, 100% 80vh, 0 100%);
     clip-path: polygon(0 20vh, 100% 0, 100% 80vh, 0 100%); }
   .header__image::after {
     content: '';
@@ -268,6 +376,10 @@ body {
   margin-top: -15vh; }
 
 .section-features {
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(0, 0, 0, 0.5)), url("../../assets/lovely-giraphes.png");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/elephants.jpg");
   background-size: cover;
   padding: 20rem 0; }
+
+.section-popular {
+  background-color: #f7f7f7;
+  padding: 10rem 0 20rem 0; }

@@ -42,6 +42,15 @@
             background-color: $white-color-primary;
         }
     }
+
+    &--blue{
+        background-color: $cool-blue-mediem;
+        color: $white-color-primary;
+        border-radius: 10rem;
+        &::after{
+            background-color: $cool-blue-mediem;
+        }
+    }
     
     &--animated{
         animation: moveInBottom .5s ease-out .75s;

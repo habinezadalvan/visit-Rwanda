@@ -6,6 +6,7 @@
         background-image:linear-gradient(to right bottom, rgba($green-color-primary-light, .8),  rgba($black-color-primary, 0.5)), url('../assets/nyungwe.jpg');
         background-size: cover;
         background-position: top;
+        -webkit-clip-path: polygon(0 20vh, 100% 0, 100% 80vh, 0 100%);
         clip-path: polygon(0 20vh, 100% 0, 100% 80vh, 0 100%);
     }
     &__image::after{
