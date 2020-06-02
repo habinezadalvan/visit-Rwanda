@@ -101,6 +101,12 @@ body {
 .u-margin-top-medium {
   margin-top: 10rem; }
 
+.u-line-spacing-small {
+  letter-spacing: 1rem; }
+
+.u-special-h2 {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(126, 213, 111, 0.8)); }
+
 .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
@@ -318,9 +324,10 @@ body {
   padding-left: 9rem;
   border-radius: .3rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
   font-size: 1.6rem;
-  transform: skewX(-12deg); }
+  transform: skewX(-12deg);
+  color: rgba(255, 255, 255, 0.9); }
   .story__shape {
     height: 15rem;
     width: 15rem;
@@ -356,6 +363,26 @@ body {
   .story:hover .story__img {
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(90%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+  .bg-video .cover-model {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0; }
 
 .row {
   max-width: 144rem;
@@ -433,4 +460,5 @@ body {
   padding: 10rem 0 20rem 0; }
 
 .section-stories {
+  position: relative;
   padding: 8rem 0; }

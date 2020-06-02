@@ -5,9 +5,11 @@
     padding-left: 9rem;
     border-radius: .3rem;
     box-shadow: 0 1.5rem 4rem rgba($black-color-primary, .15);
-    background-color: $white-color-primary;
+    background-color: rgba($black-color-primary, .5);
     font-size: 1.6rem;
     transform: skewX(-12deg);
+    color:  rgba($white-color-primary, .9);
+
     
     &__shape{
         height: 15rem;
