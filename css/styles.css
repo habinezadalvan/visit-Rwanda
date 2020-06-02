@@ -76,7 +76,8 @@ body {
   letter-spacing: 1.4rem; }
 
 .col-1-of-2__paragraph {
-  font-size: 2rem; }
+  font-size: 2rem;
+  margin-bottom: .5rem; }
 
 .heading-tertiary {
   text-transform: uppercase;
@@ -114,7 +115,8 @@ body {
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2); }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0; }
+    opacity: 0;
+    backface-visibility: hidden; }
 
 .btn:active {
   transform: translateY(-0.1rem);
@@ -278,10 +280,10 @@ body {
       top: -3rem;
       left: 0; }
     .composition__photo--p2 {
-      top: 20rem;
+      top: 24rem;
       right: 0; }
     .composition__photo--p3 {
-      top: 42rem;
+      top: 46rem;
       left: 0; }
     .composition__photo:hover {
       outline: 1rem solid rgba(118, 184, 0, 0.5);
@@ -308,6 +310,52 @@ body {
     color: transparent; }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  padding: 6rem;
+  padding-left: 9rem;
+  border-radius: .3rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
+  .story__shape {
+    height: 15rem;
+    width: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative; }
+  .story__img {
+    height: 100%;
+    transform: translateX(-5rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all .5s; }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__username {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, 20%);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.7rem;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .story:hover .story__username {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(90%); }
 
 .row {
   max-width: 144rem;
@@ -372,7 +420,7 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 30rem 0;
+  padding: 37rem 0;
   margin-top: -15vh; }
 
 .section-features {
@@ -383,3 +431,6 @@ body {
 .section-popular {
   background-color: #f7f7f7;
   padding: 10rem 0 20rem 0; }
+
+.section-stories {
+  padding: 8rem 0; }
