@@ -16,3 +16,20 @@
     position: relative;
     padding: 8rem 0;
 }
+.section-booking{
+    padding: 15rem 0;
+    background-image:linear-gradient(to right bottom, $cool-yellow-medium,  $cool-yellow-deep);
+    .book-box{
+        background-image: linear-gradient(105deg, rgba($cool-yellow-medium, .4) 0%, rgba($cool-yellow-medium, .4) 50%, transparent 50%), url('../assets/liontree.jpg');
+        background-size: cover;
+        margin: 0 auto;
+        height: 50rem;
+        width: 70%;
+        border-radius: .3rem;
+        box-shadow: 0 1.5rem 4rem rgba($black-color-primary, .25);
+        &__form{
+            width: 60%;
+            padding: 1rem;
+        }
+    }
+}

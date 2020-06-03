@@ -1,4 +1,5 @@
 .btn{
+    &,
     &:link,
     &:visited{
         text-decoration: none;
@@ -8,6 +9,11 @@
         transition: all .2s;
         position: relative;
         font-size: 1.6rem;
+
+        // specific for type button
+
+        border: none;
+        cursor: pointer;
     }
     &:hover{
         transform: translateY(-0.3rem);
@@ -19,7 +25,8 @@
             backface-visibility: hidden;
         }
     }
-    &:active{
+    &:focus, &:active{
+        outline: none;
         transform: translateY(-0.1rem);
         box-shadow: 0 .5rem .7rem rgba($black-color-primary, .2);
         
@@ -53,6 +60,15 @@
         border-radius: 10rem;
         &::after{
             background-color: $cool-blue-mediem;
+        }
+    }
+
+    &--yellow{
+        background-color: $cool-yellow-deep;
+        color: $white-color-primary;
+        border-radius: 10rem;
+        &::after{
+            background-color: $cool-yellow-deep;
         }
     }
     
