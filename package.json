@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run sass",
+    "build": "npm run sass",
     "sass": "node-sass sass/main.scss css/styles.css",
     "sass:watch": "node-sass sass/main.scss css/styles.css -w"
   },
