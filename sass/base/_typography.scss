@@ -54,15 +54,21 @@ body{
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: 1.4rem;
-    @include responsive(phone){
-        letter-spacing: 1rem;
-        font-size: 2.5rem;
-    }
     &--media-query{
         @include responsive(tab-port){
             margin-top: -7rem;
             display: block;
+            font-size: 1.9rem;
         }
+    }
+    @include responsive(tab-port){
+        font-size: 2rem;
+        letter-spacing: 0rem;
+
+    }
+    @include responsive(phone){
+        // letter-spacing: 1rem;
+        // font-size: 2.5rem;
     }
 }
 
@@ -73,4 +79,9 @@ body{
 .heading-tertiary{
     text-transform: uppercase;
     font-size: 1.6rem;
+    @include responsive(tab-port){
+        font-size: 1.4rem;
+        letter-spacing: 0rem;
+
+    }
 }
