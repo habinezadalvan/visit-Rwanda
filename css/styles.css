@@ -120,14 +120,15 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 1.4rem; }
-  @media (max-width: 37.5em) {
-    .heading-secondary {
-      letter-spacing: 1rem;
-      font-size: 2.5rem; } }
   @media (max-width: 56.25em) {
     .heading-secondary--media-query {
       margin-top: -7rem;
-      display: block; } }
+      display: block;
+      font-size: 1.9rem; } }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 2rem;
+      letter-spacing: 0rem; } }
 
 .col-1-of-2__paragraph {
   font-size: 2rem;
@@ -136,6 +137,10 @@ body {
 .heading-tertiary {
   text-transform: uppercase;
   font-size: 1.6rem; }
+  @media (max-width: 56.25em) {
+    .heading-tertiary {
+      font-size: 1.4rem;
+      letter-spacing: 0rem; } }
 
 .u-center-text {
   text-align: center; }
@@ -151,6 +156,9 @@ body {
 
 .u-margin-bottom-small {
   margin-bottom: 3rem; }
+  @media (max-width: 56.25em) {
+    .u-margin-bottom-small {
+      margin-bottom: 1rem; } }
 
 .u-margin-top-small {
   margin-bottom: 3rem; }
@@ -203,6 +211,10 @@ body {
   font-size: 1.6rem;
   border: none;
   cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .btn, .btn:link, .btn:visited {
+      font-size: .7rem;
+      padding: 1rem 3rem; } }
   @media (max-width: 37.5em) {
     .btn, .btn:link, .btn:visited {
       padding: 1rem 3rem;
@@ -613,20 +625,49 @@ body {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.5);
   transition: all .7s .2s; }
+  @media (max-width: 75em) {
+    .popup__content {
+      width: 85%;
+      font-size: 1.3rem; } }
+  @media (max-width: 56.25em) {
+    .popup__content {
+      width: 95%;
+      font-size: 1.2rem; } }
+  @media (max-width: 37.5em) {
+    .popup__content {
+      width: 90%; } }
 
 .popup__images-box {
   width: 33.33333%;
   display: table-cell; }
+  @media (max-width: 37.5em) {
+    .popup__images-box {
+      width: 100%;
+      display: inline-block;
+      float: left; } }
 
 .popup__img {
   width: 100%;
   display: block; }
+  @media (max-width: 37.5em) {
+    .popup__img {
+      width: 50%;
+      display: inline-block;
+      float: left;
+      height: 20rem; } }
 
 .popup__text {
   width: 66.666667%;
   display: table-cell;
   vertical-align: middle;
   padding: 2rem 4rem; }
+  @media (max-width: 56.25em) {
+    .popup__text {
+      padding: 1rem 2rem; } }
+  @media (max-width: 37.5em) {
+    .popup__text {
+      width: 100%;
+      display: block; } }
 
 .popup__paragraph {
   font-size: 1.4rem;
@@ -639,6 +680,9 @@ body {
   hyphens: auto;
   column-gap: 2rem;
   column-rule: 0.1rem solid #999; }
+  @media (max-width: 56.25em) {
+    .popup__paragraph {
+      margin-bottom: 2rem; } }
 
 .popup__cancel-button:link, .popup__cancel-button:visited {
   font-size: 3rem;

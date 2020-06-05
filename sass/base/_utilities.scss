@@ -10,6 +10,9 @@
 }
 .u-margin-bottom-small{
     margin-bottom: 3rem;
+    @include responsive(tab-port){
+        margin-bottom: 1rem;
+    }
 }
 .u-margin-top-small{
     margin-bottom: 3rem;

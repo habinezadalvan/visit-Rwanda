@@ -31,20 +31,53 @@
        opacity: 0;
        transform:translate(-50%, -50%) scale(0.5);
        transition: all .7s .2s;
+       @include responsive(tab-land){
+         width: 85%;
+         font-size: 1.3rem;
+       }
+       @include responsive(tab-port){
+        width: 95%;
+        font-size: 1.2rem;
+      }
+      @include responsive(phone){
+        width: 90%;
+      }
     }
     &__images-box{
         width: 33.33333%;
         display: table-cell;
+
+        @include responsive(phone){
+            width: 100%;
+            display: inline-block;
+            float: left;
+
+          }
     }
     &__img{
         width: 100%;
         display: block;
+        @include responsive(phone){
+            width: 50%;
+            display: inline-block;
+            float: left;
+            height: 20rem;
+          }
     }
     &__text{
         width: 66.666667%;
         display: table-cell;
         vertical-align: middle;
         padding: 2rem 4rem;
+        @include responsive(tab-port){
+            padding: 1rem 2rem;
+
+        }
+
+        @include responsive(phone){
+            width: 100%;
+            display: block;
+          }
     }
     &__paragraph{
         font-size: 1.4rem;
@@ -57,6 +90,10 @@
         hyphens: auto;
         column-gap: 2rem;
         column-rule: .1rem solid $gray-color-primary2;
+        @include responsive(tab-port){
+        margin-bottom: 2rem;
+        // column-count: 3;
+        }
     }
     &__cancel-button{
         &:link,
