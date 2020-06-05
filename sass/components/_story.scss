@@ -9,7 +9,19 @@
     font-size: 1.6rem;
     transform: skewX(-12deg);
     color:  rgba($white-color-primary, .9);
+    @include responsive(tab-port){
+        width: 100%;
+        padding: 2rem;
+        padding-left: 0;
+        
+    }
 
+    @include responsive(phone){
+        width: 95%;
+        padding: 3rem;
+        padding-left: 2rem;
+        transform: skewX(0);
+    }
     
     &__shape{
         height: 15rem;
@@ -21,6 +33,13 @@
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+
+        @include responsive(phone){
+            height: 13rem;
+            width: 13rem;  
+        transform: translateX(-3rem) skewX(0);
+            
+        }
     }
     &__img{
         height: 100%;
@@ -32,6 +51,9 @@
     }
     &__text{
         transform: skewX(12deg);
+        @include responsive(phone){
+        transform: skewX(0);
+        }
     }
     &__username{
         position: absolute;

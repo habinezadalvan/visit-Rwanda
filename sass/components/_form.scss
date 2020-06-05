@@ -32,6 +32,9 @@
         &::-webkit-input-placeholder{
             color: $gray-color-primary2;
         }
+        @include responsive(tab-port){
+            width: 100%;
+        }
 
     }
     &__label{
@@ -58,6 +61,13 @@
         margin-top: -1rem;
         cursor: pointer;
         width: 40%;
+        @include responsive(tab-port){
+            font-size: 1.5rem;
+        }
+
+        @include responsive(phone){
+            width: 100%;
+        }
         
     }
     
