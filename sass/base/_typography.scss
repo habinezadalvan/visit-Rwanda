@@ -4,7 +4,6 @@ body{
     font-weight: 400;
     color: $gray-color-primary;
     line-height: 1.7;
-    padding: 3rem; 
 }
 
 .main-title{
@@ -18,6 +17,14 @@ body{
         font-weight: 400;
         letter-spacing: 5.37rem;
         animation: moveInLeft 1s ease-out;
+        @include responsive(tab-port){
+            letter-spacing: 4rem;
+            font-size: 5rem;
+        }
+        @include responsive(phone){
+            letter-spacing: 1.6rem;
+            font-size: 5rem;
+        }
     }   
     &--sub{
         display: block;
@@ -26,6 +33,15 @@ body{
         letter-spacing: 1.14rem;
         margin-left: -2.8rem;
         animation: moveInRight 1s ease-out;
+
+        @include responsive(tab-port){
+            letter-spacing: 1rem;
+            font-size: 1rem;
+            font-weight: 900;
+        }
+        @include responsive(phone){
+            letter-spacing: .7rem;
+        }
     }
 }
 
@@ -38,6 +54,16 @@ body{
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: 1.4rem;
+    @include responsive(phone){
+        letter-spacing: 1rem;
+        font-size: 2.5rem;
+    }
+    &--media-query{
+        @include responsive(tab-port){
+            margin-top: -7rem;
+            display: block;
+        }
+    }
 }
 
 .col-1-of-2__paragraph{

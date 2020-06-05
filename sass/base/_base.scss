@@ -7,9 +7,31 @@
 }
 
 html{
-    font-size: 62.5%;
+    font-size: 62.5%; //normally root font-size= 16px. In our case we want 1 rem = 10px; so 10px/16px = 62.5%
+    @include responsive(desktop){
+        font-size: 55%; // we want tables landscape font-size 55% of 16px
+    }
+
+    @include responsive(tab-land){
+        font-size: 50%; // we want tables landscape font-size 50% of 16px
+    }
+
+    @include responsive(tab-port){
+        font-size: 45%; // we want tables portrait font-size 45% of 16px
+    }
+
+    @include responsive(phone){
+        font-size: 40%; // we want phone font-size 40% of 16px
+    }
+   
+    
+   
 }
 
 body{
     box-sizing: border-box;
+    padding: 3rem; 
+    @include responsive(tab-port){
+        padding: 0;
+    }
 }

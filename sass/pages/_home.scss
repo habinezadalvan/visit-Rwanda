@@ -2,19 +2,50 @@
     background-color: $gray-color-light-2;
     padding: 37rem 0;
     margin-top: -15vh;
+
+    @include responsive(desktop){
+        padding: 25rem 0;
+    }
+    @include responsive(tab-land){
+        padding: 14rem 3rem 12rem;
+    }
+    @include responsive(phone){
+        padding-top: 18rem;
+    }
 }
 .section-features{
     background-image:linear-gradient(to right bottom, rgba($green-color-primary-light, .5),  rgba($black-color-primary, 0.5)), url('../../assets/elephants.jpg');
     background-size: cover;
     padding: 20rem 0;
+    @include responsive(desktop){
+        padding: 10rem 0;
+        
+    }
+    @include responsive(phone){
+        display: block;
+        padding: 10rem 0;
+        background-position: center;
+        background-size: cover;
+
+    }
 }
 .section-popular{
     background-color: $gray-color-light-2;
     padding: 10rem 0 20rem 0;
+
+    @include responsive(desktop){
+        padding: 5rem 0 10rem 0;
+    }
+    @include responsive(tab-port){
+        padding: 10rem;
+    }
 }
 .section-stories{
     position: relative;
     padding: 8rem 0;
+    @include responsive(desktop){
+        padding: 5rem 0 10rem;
+    }
 }
 .section-booking{
     padding: 15rem 0;

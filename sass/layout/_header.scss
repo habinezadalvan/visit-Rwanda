@@ -8,6 +8,12 @@
         background-position: top;
         -webkit-clip-path: polygon(0 20vh, 100% 0, 100% 80vh, 0 100%);
         clip-path: polygon(0 20vh, 100% 0, 100% 80vh, 0 100%);
+        transition: all 5s;
+        @include responsive(phone){
+            -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 85vh, 0 100%);
+
+            clip-path: polygon(0 15vh, 100% 0, 100% 85vh, 0 100%);
+        }
     }
     &__image::after{
         content: '';
@@ -29,6 +35,14 @@
         top: 0vh;
         left: 0vh;
         height: 15rem;
+        @include responsive(tab-land){
+            height: 12rem;
+            margin-top: -2rem;
+        }
+        @include responsive(tab-port){
+            height: 10rem;
+        }
+       
     }
     &__logo{
         height: 100%;

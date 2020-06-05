@@ -3,9 +3,16 @@
     background-color: $gray-color-dark;
     font-size: 1.2rem;
     color: $white-color-primary;
+    @include responsive(tab-port){
+        padding-top: 12rem;
+        font-size: 1.3rem;
+    }
     &__logo-box{
         width: 15%;
         margin: -5rem auto 0;
+        @include responsive(phone){
+            width: 20%;
+        }
     }
     &__logo{
         width: 100%;
@@ -16,6 +23,9 @@
         padding-top: 3rem;
         width: 50%;
         margin: 0 auto;
+        @include responsive(tab-land){
+            width: 80%;
+        }
     }
     &__list{
         list-style: none;
@@ -43,5 +53,8 @@
         text-align: center;
         width: 50%;
         margin: 0 auto;
+        @include responsive(tab-land){
+            width: 80%;
+        }
     }
 }

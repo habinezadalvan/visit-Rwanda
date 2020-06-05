@@ -3,6 +3,7 @@
     margin: 0 auto;
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
+
     }
     @include clearfix;
     
@@ -11,6 +12,15 @@
             margin-right: $gutter-horizontal;
         }
         float: left;
+        @include responsive(tab-port){
+            width: 100% !important;
+            margin-right: 0;
+            margin-bottom: $gutter-vertical;
+        }
+    }
+
+    @include responsive(tab-port){
+        width: 50rem;
     }
     .col-1-of-2{
         width: calc((100% - #{$gutter-horizontal}) / 2);

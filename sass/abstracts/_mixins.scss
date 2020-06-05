@@ -5,3 +5,47 @@
         clear: both;
     }
 }
+
+@mixin absolutePositionCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+// MIDIA QUERIES
+
+/*
+0-600px: phone
+601-900px: tables portrait
+901-1200px: tables landscape
+1201-1800px: desktops
+1801+: big screens, which the normal size for this project now
+ */
+
+ /*
+ MEDIA QUERIES ARGUEMENTS
+
+ phone: phone
+ tab-port: tables portrait
+ tab-land: tables landscape
+ desktop: desktops
+ */
+
+ //ORDER: base + typography > general layout + grid > page layout > components
+
+ @mixin responsive($breakpoint) {
+     @if $breakpoint == phone {
+        @media (max-width: 37.5em) {@content}; // 600px
+     }
+     @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) {@content}; //900px
+     }
+     @if $breakpoint == tab-land {
+        @media (max-width: 75em) {@content}; // 1200px
+     }
+     @if $breakpoint == desktop {
+        @media (max-width: 112.5em) {@content}; // 1800px
+     }
+ }

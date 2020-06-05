@@ -4,9 +4,18 @@
 }
 .u-margin-top-6{
     margin-top: 5rem;
+    @include responsive(tab-port){
+        margin-top: 1rem !important;
+    }
 }
 .u-margin-bottom-small{
     margin-bottom: 3rem;
+}
+.u-margin-top-small{
+    margin-bottom: 3rem;
+}
+.u-margin-bottom-medium{
+    margin-bottom: 5rem;
 }
 .u-center-content{
     text-align: center;
