@@ -23,6 +23,9 @@
 
 .u-margin-top-medium{
     margin-top: 10rem;
+    @include responsive(phone){
+        margin-top: 5rem;
+    }
 }
 
 .u-line-spacing-small{

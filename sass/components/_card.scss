@@ -3,6 +3,11 @@
    -moz-perspective: 150rem;
    position: relative;
    height: 53rem;
+   @include responsive(phone){
+        margin-bottom: 30rem;
+        padding: 0;
+        width: 90%;
+    }
    
 //    FRONT SIDE
    &__side{
@@ -16,12 +21,27 @@
        border-radius: .3rem;
        box-shadow: 0 1.5rem 4rem rgba($black-color-primary, .15);
         overflow: hidden;
+        @include responsive(phone){
+            width: 100%;
+            margin: 0 auto;
+        }
         &--front{
-        background-color: $white-color-primary;
-
+            background-color: $white-color-primary;
+            @include responsive(phone){
+                z-index: 1;
+                clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
         }
         &--back{
             transform: rotateY(180deg);
+            @include responsive(phone){
+                transform: rotateY(0);
+                z-index: -1;
+                top: 24rem;
+
+            }
             &--1{
                 background-image: linear-gradient(to right bottom, $cool-blue-mediem, $cool-blue-deep);
             }
@@ -39,6 +59,15 @@
     }
     &:hover &__side--back{
         transform: rotateY(0);
+    }
+
+    @include responsive(phone){
+        &:hover &__side--front{
+            transform: none;
+        }
+        &:hover &__side--back{
+            transform: none;
+        }
     }
     &__image{
         height: 23rem;
@@ -108,19 +137,40 @@
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @include responsive(phone){
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            height: 17rem;
+            text-align: center;
+        }
     }
     &__back-paragraphs{
         color: $white-color-primary;
         margin-bottom: 13rem;
         text-align: center;
+        @include responsive(phone){
+            font-size: 1rem !important;
+            margin-bottom: 5rem;
+
+        }
     }
     &__back-be-there{
         font-size: 1.5rem;
         text-transform: uppercase;
         margin-bottom: 4rem;
+        @include responsive(phone){
+            font-size: 1rem !important;
+            margin-bottom: 2rem;
+
+        }
     }
     &__back-simple{
         font-size: 3rem;
         font-weight: 100;
+        @include responsive(phone){
+            font-size: 1rem !important;
+        }
     }
 }

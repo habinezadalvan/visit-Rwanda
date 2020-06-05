@@ -6,6 +6,11 @@
     box-shadow: 0 1.5rem 3rem rgba($black-color-primary, .15);
     padding: 4rem;
     transition: transform .3s;
+    @include responsive(phone){
+        width: 80%;
+        margin: 0 auto;
+    }
+
     &__icon{
         font-size: 6rem;
         margin-bottom: .5rem;
