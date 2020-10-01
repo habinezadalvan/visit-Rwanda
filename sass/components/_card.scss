@@ -2,16 +2,19 @@
    perspective: 150rem;
    -moz-perspective: 150rem;
    position: relative;
-   height: 53rem;
+   height: 60rem;
+ 
+
    @include responsive(phone){
-        margin-bottom: 30rem;
+        margin-bottom: 15rem;
         padding: 0;
-        width: 90%;
+        width: 100%;
+
     }
    
 //    FRONT SIDE
    &__side{
-       height: 53rem;
+       height: 100%;
        width: 100%;
        transition: all 1s ease;
        position: absolute;
@@ -21,13 +24,16 @@
        border-radius: .3rem;
        box-shadow: 0 1.5rem 4rem rgba($black-color-primary, .15);
         overflow: hidden;
+      
         @include responsive(phone){
-            width: 100%;
             margin: 0 auto;
+
         }
         &--front{
+
             background-color: $white-color-primary;
             @include responsive(phone){
+
                 z-index: 1;
                 clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
                 border-bottom-right-radius: 0;
@@ -35,11 +41,13 @@
             }
         }
         &--back{
+
             transform: rotateY(180deg);
             @include responsive(phone){
                 transform: rotateY(0);
                 z-index: -1;
-                top: 24rem;
+                top: 20rem;
+       height: 90%;
 
             }
             &--1{
@@ -70,7 +78,7 @@
         }
     }
     &__image{
-        height: 23rem;
+        height: 30rem;
         background-size: cover;
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);

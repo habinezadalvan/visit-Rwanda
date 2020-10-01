@@ -36,6 +36,13 @@
  //ORDER: base + typography > general layout + grid > page layout > components
 
  @mixin responsive($breakpoint) {
+    @if $breakpoint == very-small-phone {
+        @media (max-width: 12.5em) {@content}; // 200px
+     }
+  
+    @if $breakpoint == small-phone {
+        @media (max-width: 25em) {@content}; // 400px
+     }
      @if $breakpoint == phone {
         @media (max-width: 37.5em) {@content}; // 600px
      }

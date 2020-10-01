@@ -17,11 +17,20 @@ html{
     }
 
     @include responsive(tab-port){
-        font-size: 45%; // we want tables portrait font-size 45% of 16px
+        font-size: 40%; // we want tables portrait font-size 45% of 16px
     }
 
     @include responsive(phone){
-        font-size: 40%; // we want phone font-size 40% of 16px
+        font-size: 30%; // we want phone font-size 40% of 16px
+        p{
+            font-size: 1.6rem;
+        }
+    }
+    @include responsive(small-phone){
+        font-size: 20%; // we want phone font-size 20% of 16px
+    }
+    @include responsive(very-small-phone){
+        font-size: 15%; // we want phone font-size 15% of 16px
     }
    
 }

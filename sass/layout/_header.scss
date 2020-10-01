@@ -6,13 +6,13 @@
         background-image:linear-gradient(to right bottom, rgba($green-color-primary-light, .8),  rgba($black-color-primary, 0.5)), url('../assets/nyungwe.jpg');
         background-size: cover;
         background-position: top;
-        -webkit-clip-path: polygon(0 20vh, 100% 0, 100% 80vh, 0 100%);
-        clip-path: polygon(0 20vh, 100% 0, 100% 80vh, 0 100%);
-        transition: all 5s;
-        @include responsive(phone){
-            -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 85vh, 0 100%);
+        -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 80vh, 0 100%);
+        clip-path: polygon(0 15vh, 100% 0, 100% 85vh, 0 100%);
+    transition: all 10s;
 
-            clip-path: polygon(0 15vh, 100% 0, 100% 85vh, 0 100%);
+        @include responsive(phone){
+            -webkit-clip-path: polygon(0 5vh, 100% 0, 100% 95vh, 0 100%);
+            clip-path: polygon(0 5vh, 100% 0, 100% 95vh, 0 100%);
         }
     }
     &__image::after{
@@ -24,6 +24,8 @@
         top: 0;
         left: 0;
         z-index: -1;
+    transition: all 10s;
+
     }
     &__image:hover::after{
         background-image:linear-gradient(to right bottom, rgba($green-color-primary-light, .8),  rgba($black-color-primary, .5)), url('../assets/nyungwe2.jpg');

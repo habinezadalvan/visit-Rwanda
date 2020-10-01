@@ -58,10 +58,18 @@ html {
       font-size: 50%; } }
   @media (max-width: 56.25em) {
     html {
-      font-size: 45%; } }
+      font-size: 40%; } }
   @media (max-width: 37.5em) {
     html {
-      font-size: 40%; } }
+      font-size: 30%; }
+      html p {
+        font-size: 1.6rem; } }
+  @media (max-width: 25em) {
+    html {
+      font-size: 20%; } }
+  @media (max-width: 12.5em) {
+    html {
+      font-size: 15%; } }
 
 body {
   box-sizing: border-box;
@@ -295,14 +303,14 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 53rem; }
+  height: 60rem; }
   @media (max-width: 37.5em) {
     .card {
-      margin-bottom: 30rem;
+      margin-bottom: 15rem;
       padding: 0;
-      width: 90%; } }
+      width: 100%; } }
   .card__side {
-    height: 53rem;
+    height: 100%;
     width: 100%;
     transition: all 1s ease;
     position: absolute;
@@ -314,7 +322,6 @@ body {
     overflow: hidden; }
     @media (max-width: 37.5em) {
       .card__side {
-        width: 100%;
         margin: 0 auto; } }
     .card__side--front {
       background-color: #fff; }
@@ -330,7 +337,8 @@ body {
         .card__side--back {
           transform: rotateY(0);
           z-index: -1;
-          top: 24rem; } }
+          top: 20rem;
+          height: 90%; } }
       .card__side--back--1 {
         background-image: linear-gradient(to right bottom, #28B9FB, #1F75FE); }
       .card__side--back--2 {
@@ -347,7 +355,7 @@ body {
     .card:hover .card__side--back {
       transform: none; } }
   .card__image {
-    height: 23rem;
+    height: 30rem;
     background-size: cover;
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -439,11 +447,11 @@ body {
       margin-top: 3rem; } }
   .composition__photo {
     width: 55%;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
     position: absolute;
     z-index: 1;
-    transition: all .2s;
+    transition: all 0.2s;
     outline-offset: 2rem; }
     .composition__photo--p1 {
       top: -3rem;
@@ -819,39 +827,46 @@ body {
 .row {
   max-width: 144rem;
   margin: 0 auto; }
+  @media (max-width: 56.25em) {
+    .row {
+      width: 60%; } }
+  @media (max-width: 37.5em) {
+    .row {
+      width: 90%; } }
   .row:not(:last-child) {
     margin-bottom: 4rem; }
   .row::after {
     content: '';
     display: table;
     clear: both; }
-  .row [class^='col-'] {
+  .row [class^="col-"] {
     float: left; }
-    .row [class^='col-']:not(:last-child) {
+    .row [class^="col-"]:not(:last-child) {
       margin-right: 3rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0; } }
     @media (max-width: 56.25em) {
-      .row [class^='col-'] {
+      .row [class^="col-"] {
         width: 100% !important;
         margin-right: 0;
         margin-bottom: 4rem; } }
-  @media (max-width: 56.25em) {
-    .row {
-      width: 50rem; } }
   .row .col-1-of-2 {
     width: calc((100% - 3rem) / 2); }
   .row .col-1-of-3 {
     width: calc((100% - 2 * 3rem) / 3); }
     @media (max-width: 37.5em) {
       .row .col-1-of-3 {
-        margin-right: -3rem; } }
+        width: 90%;
+        position: 0; } }
   .row .col-2-of-3 {
-    width: calc(2 * ((100% - 2 * 3rem) / 3) + 3rem); }
+    width: calc( 2 * ((100% - 2 * 3rem) / 3) + 3rem); }
   .row .col-1-of-4 {
     width: calc((100% - 3 * 3rem) / 4); }
   .row .col-2-of-4 {
-    width: calc(2 * ((100% - 3 * 3rem) / 4) + 3rem); }
+    width: calc( 2 * ((100% - 3 * 3rem) / 4) + 3rem); }
   .row .col-3-of-4 {
-    width: calc((2 * (((100% - 3 * 3rem) / 4) + 3rem)) + ((100% - 3 * 3rem) / 4)); }
+    width: calc( (2 * (((100% - 3 * 3rem) / 4) + 3rem)) + ((100% - 3 * 3rem) / 4)); }
 
 .header {
   position: relative; }
@@ -860,13 +875,13 @@ body {
     background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(0, 0, 0, 0.5)), url("../assets/nyungwe.jpg");
     background-size: cover;
     background-position: top;
-    -webkit-clip-path: polygon(0 20vh, 100% 0, 100% 80vh, 0 100%);
-    clip-path: polygon(0 20vh, 100% 0, 100% 80vh, 0 100%);
-    transition: all 5s; }
+    -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 80vh, 0 100%);
+    clip-path: polygon(0 15vh, 100% 0, 100% 85vh, 0 100%);
+    transition: all 10s; }
     @media (max-width: 37.5em) {
       .header__image {
-        -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 85vh, 0 100%);
-        clip-path: polygon(0 15vh, 100% 0, 100% 85vh, 0 100%); } }
+        -webkit-clip-path: polygon(0 5vh, 100% 0, 100% 95vh, 0 100%);
+        clip-path: polygon(0 5vh, 100% 0, 100% 95vh, 0 100%); } }
   .header__image::after {
     content: '';
     display: block;
@@ -875,7 +890,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; }
+    z-index: -1;
+    transition: all 10s; }
   .header__image:hover::after {
     background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(0, 0, 0, 0.5)), url("../assets/nyungwe2.jpg");
     background-size: cover; }
@@ -901,23 +917,17 @@ body {
     text-align: center; }
 
 .section-about {
-  background-color: #f7f7f7;
-  padding: 37rem 0;
-  margin-top: -15vh; }
-  @media (max-width: 112.5em) {
-    .section-about {
-      padding: 25rem 0; } }
-  @media (max-width: 75em) {
-    .section-about {
-      padding: 27rem 3rem 12rem; } }
+  background-color: white;
+  padding: 20rem 0rem; }
   @media (max-width: 37.5em) {
     .section-about {
-      padding-top: 18rem; } }
+      padding: 10rem 0rem;
+      margin-bottom: 10rem; } }
 
 .section-features {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/elephants.jpg");
   background-size: cover;
-  padding: 20rem 0; }
+  padding: 20rem 0rem; }
   @media (max-width: 112.5em) {
     .section-features {
       padding: 10rem 0; } }
@@ -937,6 +947,9 @@ body {
   @media (max-width: 56.25em) {
     .section-popular {
       padding: 10rem; } }
+  @media (max-width: 37.5em) {
+    .section-popular {
+      padding: 0.5rem; } }
 
 .section-stories {
   position: relative;
@@ -956,7 +969,7 @@ body {
     background-size: 100%;
     margin: 0 auto;
     width: 70%;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25); }
     @media (max-width: 75em) {
       .section-booking .book-box {

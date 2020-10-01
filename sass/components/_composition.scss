@@ -1,68 +1,68 @@
 .composition {
-    position: relative;
-    @include responsive(tab-port){
-        height: 15rem;
-   }
-   @include responsive(phone){
+  position: relative;
+  @include responsive(tab-port) {
+    height: 15rem;
+  }
+  @include responsive(phone) {
     height: 27rem;
     margin-top: 3rem;
-}   
-    &__photo {
-        width: 55%;
-        border-radius: .2rem;
-        box-shadow: 0 1.5rem 2rem rgba($black-color-primary, .4);
-        position: absolute;
-        z-index: 1;
-        transition: all .2s;
-        outline-offset: 2rem;
-        &--p1{
-            top: -3rem;
-            left: 0;
-            @include responsive(tab-port){
-                top: 1rem;
-                left: -12rem;
-            }
-            @include responsive(phone){
-                top: -3rem;
-                left: 14rem;
-            }
-        }
-        &--p2{
-            top: 24rem;
-            right: 0;
-            margin-right: 2rem;
-            @include responsive(tab-port){
-                top: 0rem;
-                left: 12rem;
-                transform: scale(1.1);
-                box-shadow: 0 2.5rem 3rem rgba($black-color-primary, .6);
-            }
-            @include responsive(phone){
-                top: 10rem;
-                left: 2rem;
-            }
-        }
-        &--p3{
-            top: 46rem;
-            left: 0;
-            @include responsive(tab-port){
-                top: 1rem;
-                left: 36rem;
-                z-index: 0;
-            }
-            @include responsive(phone){
-                top: 21rem;
-                left: 14rem;
-            }
-        }
-        &:hover{
-            outline: 1rem solid rgba($cool-green, .5);
-            transform: scale(1.05) translateY(-2rem);
-            box-shadow: 0 2rem 4rem rgba($black-color-primary, .5);
-            z-index: 2;
-        }
+  }
+  &__photo {
+    width: 55%;
+    border-radius: 0.2rem;
+    box-shadow: 0 1.5rem 2rem rgba($black-color-primary, 0.4);
+    position: absolute;
+    z-index: 1;
+    transition: all 0.2s;
+    outline-offset: 2rem;
+    &--p1 {
+      top: -3rem;
+      left: 0;
+      @include responsive(tab-port) {
+        top: 1rem;
+        left: -12rem;
+      }
+      @include responsive(phone) {
+        top: -3rem;
+        left: 14rem;
+      }
     }
-    &:hover &__photo:not(:hover){
-        transform: scale(.8);
+    &--p2 {
+      top: 24rem;
+      right: 0;
+      margin-right: 2rem;
+      @include responsive(tab-port) {
+        top: 0rem;
+        left: 12rem;
+        transform: scale(1.1);
+        box-shadow: 0 2.5rem 3rem rgba($black-color-primary, 0.6);
+      }
+      @include responsive(phone) {
+        top: 10rem;
+        left: 2rem;
+      }
     }
-} 
+    &--p3 {
+      top: 46rem;
+      left: 0;
+      @include responsive(tab-port) {
+        top: 1rem;
+        left: 36rem;
+        z-index: 0;
+      }
+      @include responsive(phone) {
+        top: 21rem;
+        left: 14rem;
+      }
+    }
+    &:hover {
+      outline: 1rem solid rgba($cool-green, 0.5);
+      transform: scale(1.05) translateY(-2rem);
+      box-shadow: 0 2rem 4rem rgba($black-color-primary, 0.5);
+      z-index: 2;
+    }
+  }
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.8);
+  }
+}
